@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13507"/>
+    </dependencies>
+    <scenes>
+        <!--Friends Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="FriendsInterfaceController" customModule="Contacts_WatchKit_Extension">
+                    <items>
+                        <table alignment="center" verticalAlignment="center" id="vNv-Jt-jhw">
+                            <items>
+                                <tableRow identifier="FriendRow" id="RIq-LA-DnE" customClass="FriendRowController" customModule="Contacts_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="ySk-A4-Kgr">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="i3c-Iz-M7U">
+                                                <color key="color" red="1" green="0.62707295529999996" blue="0.25212124219999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </separator>
+                                            <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="nph-Yh-fW2">
+                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                            </label>
+                                            <imageView width="24" height="24" alignment="right" verticalAlignment="center" image="1" contentMode="scaleAspectFill" id="2MS-gk-Bp2"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="avatarImage" destination="2MS-gk-Bp2" id="j0G-Q0-1bI"/>
+                                        <outlet property="fullNameLabel" destination="nph-Yh-fW2" id="BpU-Yr-ECC"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="friendsTable" destination="vNv-Jt-jhw" id="UcK-dh-c4u"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-32" y="31"/>
+        </scene>
+        <!--FriendDetail-->
+        <scene sceneID="ctN-iN-iJc">
+            <objects>
+                <controller identifier="FriendDetail" id="qBJ-aG-vsc" customClass="FriendDetailInterfaceController" customModule="Contacts_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="8Ah-b1-kbE">
+                            <items>
+                                <group width="1" alignment="left" spacing="6" id="sPp-bD-THh">
+                                    <items>
+                                        <imageView width="48" height="48" alignment="left" verticalAlignment="center" image="3" id="6HM-ER-YL2"/>
+                                        <group alignment="left" verticalAlignment="center" layout="vertical" spacing="2" id="auw-31-wXp">
+                                            <items>
+                                                <label alignment="left" text="Label" numberOfLines="0" id="8MW-P6-qHl">
+                                                    <color key="textColor" red="1" green="0.16090974611866726" blue="0.8395697191518593" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                                <label alignment="left" text="Label" numberOfLines="0" id="NlI-R0-nAI">
+                                                    <color key="textColor" red="0.92239222501730767" green="1" blue="0.99722445079968658" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="font" type="italicSystem" pointSize="15"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="HpC-6t-BkU">
+                                    <items>
+                                        <label alignment="left" text="Label" textAlignment="justified" numberOfLines="0" id="il2-3D-EIZ"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="avatarImage" destination="6HM-ER-YL2" id="w80-jA-Iju"/>
+                        <outlet property="descriptionLabel" destination="il2-3D-EIZ" id="BJc-7U-67P"/>
+                        <outlet property="fullNameLabel" destination="8MW-P6-qHl" id="r5Y-Ck-tDp"/>
+                        <outlet property="phoneNumber" destination="NlI-R0-nAI" id="3yg-UA-sM8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="304" y="31"/>
+        </scene>
+    </scenes>
+</document>
